@@ -1,0 +1,6 @@
+
+select[name="operation"] {
+    width: 70px;
+    height: 30px;
+    padding: 5px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Calculator</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            select[name="operation"] {
+                width: 70px;
+                height: 30px;
+                padding: 5px;
+            }
+            select[name="operation"] option {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="my-4">Simple Calculator</h1>
+            <form action="/calculate" method="post" class="mb-4">
+                <div class="form-group">
+                    <input type="number" name="number1" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <select name="operation" class="form-control" required>
+                        <option value="add">+</option>
+                        <option value="sub">-</option>
+                        <option value="multiply">*</option>
+                        <option value="divide">/</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="number2" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Calculate</button>
+            </form>
+
+            <div id="chat-container">
+                <h2 class="my-4">Meet  ChatGPT</h2>
+                <div id="chat-log" class="mb-4"></div>
+                <div class="input-group">
+                    <input type="text" id="user-input" class="form-control" placeholder="Type your message..." autocomplete="off" />
+                    <div class="input-group-append">
+                        <button id="chat-submit" class="btn btn-outline-secondary">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
